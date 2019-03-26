@@ -1,0 +1,105 @@
+<html>
+<head><title>Praktikum 6</title>
+<script>
+    var vid_user , vpassword , vlev_user;
+
+    function login(){
+        vid_user=(frlogin.txtiduser.value);
+        vpassword= (frlogin.txtpass.value);
+        vlev_user= (frlogin.cblevuser.value);
+
+        if(vid_user == ""){
+            window.alert("ID. User belum diisi");
+            frlogin.txtiduser.focus();
+
+            return false;
+        }else if (vpassword = ""){
+            window.alert("Password belum diisi");
+            frlogin.txtiduser.focus();
+
+            return false;
+        }else{
+            window.alert("Anda ingin sebagai "+vlev_user);
+            frlogin.txtiduser.focus();
+        }
+        return true;
+    }
+</script>
+</head>
+<body>
+    <form name="frlogin" method="post" action="" target="" onsubmit="return login()">
+        <table align ="center">
+                <tr>
+                <td>
+                <fieldset>
+                <legend>LoginSystem</legend>
+                <label for="txtiduser">ID. User</label><br>
+                <input type="text" name="txtiduser" size="35" placeholder="Id. User"><br>
+                <label for="txtpass">Password</label><br>
+                <input type="password" name="password" size="35" placeholder="Password"><br>
+                <label for="cblevuser">Level User</label><br>
+                <select name=cblevuser style="width:100%">
+                    <option value="">-- Pilih Level User --</option>
+                    <option value="Administrator">Administrator</option>
+                    <option value="User">User</option>
+                </select><br><br>
+                <input type="submit" value="Login">&nbsp;<input type="reset" value = "Batal">
+                </fieldset>
+                </td>
+                </tr>
+                </table>
+                </form>
+            
+</body>
+</html>
+
+<!--
+    baris 1 = tag pembuka html
+    baris 2 = membuat title/judul dihead dengan nama Praktikum 6
+    baris 3 = tag pembuka script
+    baris 4 = membuat variabel dengan nama vid_user , vpassword , vlev_user
+    baris 6 = membuat fungsi dengan nama login
+    baris 7 = vid_user mendapatkan nilai dari txtiduser dari  form frlogin 
+    baris 8 = vpassword mendapatkan nilai dari txtpass dari form frlogin
+    baris 9 = vlev_user mendapatkan nilai dari cblevuser dari form frlogin
+    baris 11 = jika vid_user tidak memiliki nilai
+    baris 12 = maka akan keluar peringatan id user belum diisi
+    baris 13 = dan fokus akan tertuju ke txtiduser
+    baris 15 = membuat nilai false
+    baris 16 = atau jika vpassword tidak memiliki nilai
+    baris 17 = maka akan keluar peringatan password belum diisi
+    baris 18 = dan fokus akan tertuju ke txtiduser
+    baris 20 = membuat nilai false
+    baris 21 = jika tidak 
+    baris 22 = maka akan keluar peringatan anda sebagai spasi apa yang diisi di vlev_user
+    baris 23 = dan fokus akan tertuju ke txtiduser
+    baris 24 = tag penutup else
+    baris 25 = membuat nilai true
+    baris 26 = tag penutup fungsi login
+    baris 27 = tag penutup script
+    baris 28 = tag penutup head
+    baris 29 = tag pembuka body
+    baris 30 = membuat form dengan nama frlogin dengan method post dan onsubmit return login
+    baris 31 = membuat table dengan posisi di tengah
+    baris 32 = tag pembuka tr 
+    baris 33 = tag pembuka td 
+    baris 34 = tag pembuka fieldset
+    baris 35 = membuat legend dengan nama loginsystem
+    baris 36 = membuat label untuk txtiduser dengan nama id.user 
+    baris 37 = dengan input type text dan nama txtiduser dengan ukuran 35 dan memiliki placeholder id.user
+    baris 38 = membuat label untuk txtpass dengan nama password 
+    baris 39 = dengan input type password dan nama password dengan ukuran 35 dan memiliki placeholder password
+    baris 40 = membuat label untuk cblevuser dengan nama level user 
+    baris 41 = membuat pilihan dengan nama cblevuser dengan ukuran 100%
+    baris 42 = dan memiliki opsi dengan nilai kosong dan berisi teks -- Pilih Level User -- 
+    baris 43 = opsi selanjutnya memiliki nilai administrator dan berisi teks administrator
+    baris 44 = opsi selanjutnya memiliki nilai user dan berisi teks user 
+    baris 45 = tag penutup select dan tag br untuk enter
+    baris 46 = membuat input dengan type submit dengan nilai Login &nbsp(pengganti spasi) ,membuat input dengan type reset dengan nilai Batal
+    baris 47 = tag penutup fieldset 
+    baris 48 = tag penutup td
+    baris 49 = tag penutup tr 
+    baris 50 = tag penutup table
+    baris 51 = tag penutup form
+    baris 53 = tag penutup body
+    baris 54 = tag penutup html
